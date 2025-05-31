@@ -1,0 +1,70 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* .bg-primary {
+            background-color: #9EC6F3;
+        } */
+        
+        .text-primary {
+            color: #3B82F6;
+        }
+        
+        .hover-card:hover .hover-content {
+            opacity: 1;
+        }
+        
+        .hover-content {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .department-card {
+            transition: all 0.3s ease;
+        }
+        
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        main h2 {
+            padding-top: 5%; 
+        }
