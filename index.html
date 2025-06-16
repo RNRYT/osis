@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Screenshot_20250511_150311_WhatsApp.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-white">
     <!-- Navbar -->
-    <nav class="fixed w-full bg-white shadow-md z-50">
+    <nav class="fixed w-full bg-transparent z-50" id="navbar">  
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <img class="h-10 w-10 text-blue-500" fill="currentColor" viewBox="0 0 24 24" src="img/Screenshot_20250511_150311_WhatsApp.png">
@@ -47,23 +48,38 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-700 to-blue-300">
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-400 to-blue-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 text-center md:text-left text-white mb-8 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-left">OSIS ARMATA </h1>
-                    <p class="text-lg md:text-xl mb-8">Website ini dibuat untuk menjadi pusat informasi, inspirasi, dan dokumentasi kegiatan OSIS ARMATA SMP Islam Ar Rahmah Jakarta.
-                        Temukan program, karya, serta semangat kepemimpinan siswa yang berlandaskan akhlakul karimah dan nilai-nilai Islam.</p>
+                    <p class="text-lg md:text-xl mb-8"></p>
                     <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-400 hover:text-white transition duration-300">Tentang Kami</a>
+                        <a href="#about" class="bg-white text-blue-500 px-6 py-3 rounded-lg font-medium transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 hover:text-white">Tentang Kami</a>
                         <a href="#contact" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300">Hubungi Kami</a>
                     </div>
                 </div>
+                <!-- <section class="stats">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">5,247+</div>
+                    <div class="stat-label">ACTIVE USERS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">SUCCESS RATE</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">UPTIME</div>
+                </div>
+            </div>
+                </section> -->
                 <div class="md:w-1/2">
                     <div class="relative">
                         <div class=""></div>
                         <div  class="relative z-10  p-2 rounded-lg">
-                            <img data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="w-full text-blue-500 rounded-lg" viewBox="0 0 500 300" src="img/1.jpg">
+                            <img data-tilt data-tilt-glare data-tilt-max-glare="0.2" class="w-full text-blue-500 rounded-lg" viewBox="0 0 500 300" src="img/1234.png">
                                 <!-- <rect x="0" y="0" width="500" height="300" fill="#f0f9ff"></rect>
                                 <circle cx="250" cy="120" r="50" fill="#3B82F6"></circle>
                                 <rect x="200" y="170" width="100" height="80" fill="#93c5fd"></rect>
@@ -85,15 +101,7 @@
                 <div class="md:w-1/2 mb-8 md:mb-0">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang OSIS</h2>
                     <div class="w-20 h-1 bg-blue-500 mb-6"></div>
-                    <p class="text-gray-600 mb-6">
-                        Organisasi Siswa Intra Sekolah (OSIS) adalah organisasi resmi di tingkat sekolah menengah yang menjadi wadah bagi siswa untuk mengembangkan potensi kepemimpinan, kreativitas, dan keterampilan organisasi.
-                    </p>
-                    <p class="text-gray-600 mb-6">
-                        OSIS berperan sebagai penghubung antara siswa dan pihak sekolah, serta menjadi penggerak berbagai kegiatan positif yang mendukung visi dan misi sekolah. Melalui OSIS, siswa belajar berorganisasi, bekerja sama dalam tim, dan mengembangkan karakter yang baik.
-                    </p>
-                    <p class="text-gray-600">
-                        Dengan berbagai program kerja yang dirancang dan dilaksanakan, OSIS bertujuan untuk menciptakan lingkungan sekolah yang kondusif, meningkatkan prestasi siswa, dan mempersiapkan generasi muda yang siap menghadapi tantangan masa depan.
-                    </p>
+                    <p  id="typing" class="text-gray-600 mb-6"></p>
                 </div>
                 <div class="md:w-1/2 md:pl-12">
                     <div class="relative">
@@ -117,9 +125,9 @@
     <section id="activities" class="py-16 md:py-24 bg-gradient-to-br from-blue-200 to-blue-70">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kegiatan OSIS</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kegiatan OSIS</h2>
                 <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
+                <p class="text-gray-800 max-w-2xl mx-auto">
                     Berbagai kegiatan yang diselenggarakan oleh OSIS untuk mengembangkan potensi siswa dan menciptakan lingkungan sekolah yang positif.
                 </p>
             </div>
@@ -128,7 +136,7 @@
                 <!-- Activity 1 -->
                 <div class="hover-card relative rounded-lg overflow-hidden shadow-lg group">
                     <div class="h-64 bg-blue-200">
-                        <img class="w-full h-full" src="img/1.jpg">
+                        <img class="w-full h-full" src="img/">
                             <rect width="400" height="300" fill="#dbeafe"></rect>
                             <circle cx="200" cy="120" r="60" fill="#3B82F6"></circle>
                             <rect x="140" y="180" width="120" height="80" fill="#93c5fd"></rect>
@@ -512,7 +520,7 @@
                 </a>
                 
                 <!-- Department 3 -->
-                <a href="">
+                <a href="bidang/bidang3/bidang3.html">
                     <div class="department-card bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -528,7 +536,7 @@
                 </a>
                 
                 <!-- Department 4 -->
-                <a href="">
+                <a href="bidang/bidang4/bidang4.html">
                     <div class="department-card bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -543,7 +551,7 @@
                 </a>
                 
                 <!-- Department 5 -->
-                <a href="">
+                <a href="bidang/bidang5/bidang5.html">
                     <div class="department-card bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -558,7 +566,7 @@
                 </a>
                 
                 <!-- Department 6 -->
-                <a href="">
+                <a href="bidang/bidang6/bidang6.html">
                     <div class="department-card bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -735,7 +743,7 @@
                                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                                 </svg>
                             </a> -->
-                            <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition duration-300">
+                            <a href="https://www.instagram.com/osisarmata/" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition duration-300">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
                                 </svg>
@@ -745,7 +753,7 @@
                                     <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
                                 </svg>
                             </a> -->
-                            <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition duration-300">
+                            <a href="https://www.youtube.com/@arrahmahjakarta2821" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition duration-300">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
                                 </svg>
@@ -770,7 +778,7 @@
                     </div>
                 </div>
                 <div class="text-center md:text-right">
-                    <p>&copy; 2025-2026 OSIS SEKBID IT OSIS ARMATA. Hak Cipta Dilindungi.</p>
+                    <p>&copy; 2024-2025 OSIS SEKBID IT OSIS ARMATA. Hak Cipta Dilindungi.</p>
                 </div>
             </div>
         </div>
@@ -790,6 +798,30 @@
 	    //It also supports NodeList
 	    VanillaTilt.init(document.querySelectorAll(".your-element"));
         </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+    var typed = new Typed('#typing', {
+      strings: ['Selamat Datang di Website OSIS ARMATA', 'OSIS ARMATA (Ar Rahmah Jakarta) adalah organisasi siswa yang menjadi wadah bagi pelajar SMP Islam Ar Rahmah Jakarta untuk berkembang, berkreasi, dan berkontribusi secara positif di lingkungan sekolah. Kami hadir untuk mendorong tumbuhnya potensi kepemimpinan siswa, sekaligus menanamkan nilai-nilai akhlakul karimah melalui kegiatan sosial dan pendidikan karakter sehingga dapat memimpin sesuai syariat agama Islam. Bagi kami, kepemimpinan bukan hanya tentang memimpin, tapi juga tentang memberi contoh, bekerja sama, dan menjadi pribadi yang bermanfaat bagi sesama. Kami percaya bahwa kepemimpinan dan akhlak mulia bisa tumbuh bersama melalui aksi nyata, kolaborasi, dan semangat belajar yang tidak pernah padam.'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1000, // Jeda sebelum menghapus (ms)
+      startDelay: 500, // Jeda sebelum mulai mengetik (ms)
+      loop: true
+    });
+
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-white', 'bg-opacity-90', 'py-4', 'shadow-md');
+            navbar.classList.remove('bg-transparent', 'py-4');
+        } else {
+            navbar.classList.remove('bg-white', 'bg-opacity-90', 'py-4', 'shadow-md');
+            navbar.classList.add('bg-transparent', 'py-4');
+        }
+    });
+    </script>
+        
     <!-- aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
